@@ -11,14 +11,15 @@ Semi-bold 600
 Bold 700
 - Line Heights: 
 Default 1
-1.05
-1.6
+Small 1.05
+Medium 1.2
+Large 1.6
 
 --- 02 COLORS
 
 - Primary: #e67e22
 
-- Tints: #fdf2e9 
+- Tints: #fdf2e9 #fae5d3
 - Shades: #cf711f
 - Accents:
 - Greys:
@@ -50,58 +51,6 @@ body {
   color: #555;
 }
 
-/* **************************** */
-/* GENERAL REUSABLE COMPONENTS */
-/* **************************** */
-.heading-primary {
-  font-size: 6.2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  color: #333;
-  letter-spacing: -0.05rem;
-  margin-bottom: 3.2rem;
-}
-
-.btn:link,
-.btn:visited {
-  background-color: #e67e22;
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-
-  /* put transition on original state */
-  transition: background-color 0.3s;
-}
-
-.btn--full:link,
-.btn--full:visited {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.btn--full:hover,
-.btn--full:active {
-  background-color: #cf711f;
-  /* background-color: red; */
-}
-
-.btn--outline:link,
-.btn--outline:visited {
-  background-color: #fff;
-  color: #555;
-}
-
-.btn--outline:hover,
-.btn--outline:active {
-  background-color: #fdf2e9;
-
-  /* trick border inside */
-  box-shadow: inset 0 0 0 3px #fff;
-}
 /* **************************** */
 /* HEADER */
 /* **************************** */
@@ -232,4 +181,64 @@ body {
 
 .delivered-text span {
   color: #cf711f;
+}
+
+/* **************************** */
+/* HOW IT WORKS */
+/* **************************** */
+
+.section-how {
+  padding: 9.6rem 0;
+  /* background-color: orangered; */
+}
+
+.step-number {
+  font-size: 9.6rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+
+  background-color: #fdf2e9;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step-img-box::before {
+  width: 60%;
+  padding-bottom: 60%;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 50%;
+  /* height: 60%; */
+
+  /* 60% of parent's width */
+  padding-bottom: 50%;
+  z-index: -1;
+  background-color: #fae5d3;
+}
+
+.step-img {
+  width: 35%;
 }
