@@ -15,7 +15,11 @@ strong {
 .grid {
   display: grid;
   row-gap: 9.6rem;
-  column-gap: 3.2rem;
+  column-gap: 6.4rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--center-v {
